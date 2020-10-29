@@ -1,14 +1,20 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	int n,count;
+int countSetBits(int x)
+{
+    int count = 0;
+    while(x)
+    {
+        x = x&(x-1);
+        count++;
+    }
+    return count;
+}
+int main() 
+{
+	int n;
 	cin>>n;
-	count =0;
-	while(n)
-	{
-	    n=n&(n-1);
-	    count++;
-	}
-	cout<<"count="<<count<<endl;
+	cout<<n<<"has "<<countSetBits(n)<<" set bits"<<endl;
+	return 0;
 }
