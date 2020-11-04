@@ -1,7 +1,25 @@
-// generate all the possible subsets of a set 
+/*
+
+Given a string S find all possible substrings of the string in lexicographically-sorted order.
+
+Example 1:
+
+Input : str = "abc"
+Output: a ab abc ac b bc c 
+Explanation : There are 7 substrings that 
+can be formed from abc.
+Example 2:
+
+Input: str = "aa"
+Output: a a aa
+Explanation : There are 3 substrings that 
+can be formed from aa.
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
-void printAllPossibleSubsets(char A[], int n)
+void printPowerSet(char A[], int n)
 {
     for(int i=0;i<(1<<n); i++)
     {
@@ -24,6 +42,6 @@ int main()
 	    cin>>A[i];
 	}
 	cout<<"Printing all possible subsets"<<endl;
-	printAllPossibleSubsets(A,n);
+	printPowerSet(A,n);
 	return 0;
 }
